@@ -16,10 +16,10 @@ h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}a{color:inherit;text-d
 .topnav{display:none;gap:28px;margin-left:auto;font-weight:600;color:#d7e4ee}.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(6,43,71,.92) 15%,rgba(6,43,71,.45) 100%),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80") center/cover var(--navy)}
 .hero-in{display:grid;gap:32px;padding-top:56px;padding-bottom:72px}.eyebrow{display:inline-flex;gap:8px;padding:7px 14px;border-radius:99px;background:rgba(242,179,61,.16);border:1px solid rgba(242,179,61,.5);color:#ffd988;font-size:.85rem;font-weight:700}
 .hero h1{font:700 clamp(2.5rem,9vw,5rem)/1 var(--serif);margin:20px 0 16px}.hero h1 em{display:block;font-style:italic;color:var(--gold)}.lead{font-size:clamp(1.05rem,2.6vw,1.3rem);color:#e3edf4;max-width:34ch}
-.hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin:22px 0 28px;font-weight:600}.count{padding:22px;border-radius:20px;background:rgba(6,43,71,.72);border:1px solid rgba(255,255,255,.22)}
+.count{padding:22px;border-radius:20px;background:rgba(6,43,71,.72);border:1px solid rgba(255,255,255,.22)}
 .count-title{font-weight:700;color:#d7e4ee;font-size:.92rem;text-transform:uppercase}.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0 16px;text-align:center}.count-grid div{padding:12px 4px;border-radius:12px;background:rgba(255,255,255,.08)}
-.count-grid strong{display:block;font:700 clamp(1.6rem,6vw,2.2rem)/1 var(--serif)}.count-grid span{font-size:.75rem;color:#c3d4e0}.facts{position:relative;z-index:2;margin-top:-34px}.facts-in{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:16px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
-.facts-in div{display:grid;gap:2px;padding:18px 16px;border-bottom:1px solid var(--line)}.section{padding:72px 0}.section-sand{background:var(--sand)}.head{margin-bottom:32px;max-width:640px}.kicker{font-size:.82rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.count-grid strong{display:block;font:700 clamp(1.6rem,6vw,2.2rem)/1 var(--serif)}.count-grid span{font-size:.75rem;color:#c3d4e0}
+.section{padding:72px 0}.section-sand{background:var(--sand)}.head{margin-bottom:32px;max-width:640px}.kicker{font-size:.82rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
 .head h2,.final h2{font:700 clamp(1.8rem,5vw,2.7rem)/1.1 var(--serif);color:var(--navy)}.offers{display:grid;gap:20px}.offer{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
 .offer img{aspect-ratio:16/10;object-fit:cover;width:100%}.offer-body{display:flex;flex-direction:column;flex:1;padding:22px}.offer-date{font-size:.85rem;font-weight:700;color:var(--teal)}
 .offer h3{font:700 1.4rem/1.2 var(--serif);color:var(--navy);margin:6px 0 8px}.offer-label{margin:20px 0 8px;font-size:.78rem;font-weight:800;text-transform:uppercase;color:var(--navy)}
@@ -28,15 +28,14 @@ h1,h2,h3,p,ul,ol{margin:0}ul,ol{padding:0;list-style:none}a{color:inherit;text-d
 .field{margin:0 0 16px}label{display:block;margin-bottom:6px;font-size:.9rem;font-weight:700}input{width:100%;min-height:50px;padding:12px 14px;border:1px solid #cdd7df;border-radius:12px}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 16px;padding:16px 18px;border-radius:14px;background:var(--navy);color:#fff}.total strong{font:700 1.7rem var(--serif);color:var(--gold)}
 .status{min-height:1.4em;margin-top:12px;font-size:.92rem;color:var(--bad)}.done{text-align:center;padding:12px 0}.done-ref{margin:10px 0 6px;font:700 2rem var(--serif);color:var(--ocean)}.muted{color:var(--muted);font-size:.9rem}
-.final{padding:72px 0;text-align:center;color:#fff;background:linear-gradient(rgba(6,43,71,.9),rgba(6,43,71,.9)),url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=70") center/cover var(--navy)}
-.footer{padding:24px 0;background:#041f35;color:#9fb6c7;font-size:.88rem;text-align:center}.dock{position:fixed;left:0;right:0;bottom:0;display:flex;gap:4px;padding:8px 10px;background:rgba(255,255,255,.96);border-top:1px solid var(--line)}
+.footer{padding:24px 0;background:#041f35;color:#9fb6c7;font-size:.88rem;text-align:center}
 .sheet-backdrop{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;background:rgba(3,22,36,.58)}.sheet-backdrop[hidden]{display:none}
 .reservation-sheet{position:relative;width:100%;max-width:560px;max-height:90vh;overflow:auto;padding:28px 22px;border-radius:24px 24px 0 0;background:#fff}
 .sheet-close{position:absolute;top:14px;right:16px;width:42px;height:42px;border:0;border-radius:50%;background:#f0f4f6;font-size:1.8rem;cursor:pointer}
 body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space-between;gap:14px;width:100%;padding:16px;border:2px solid #cdd7df;border-radius:14px;background:#fff;text-align:left;cursor:pointer}
 .offer-picker-menu{display:grid;gap:12px;margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}.offer-picker-menu[hidden]{display:none}
 .picker-group{display:grid;gap:6px}.picker-group-title{font-size:.76rem;font-weight:800;text-transform:uppercase;color:var(--teal)}.picker-option{display:flex;justify-content:space-between;gap:12px;width:100%;padding:12px;border:1px solid #dce4e9;border-radius:10px;background:#fff;text-align:left;cursor:pointer}
-.picker-option.is-selected{border-color:var(--gold-2);background:#fff4d8}@media(min-width:900px){.topnav{display:flex}.hero-in{grid-template-columns:1.2fr .8fr;align-items:center;padding-top:96px;padding-bottom:120px}.offers{grid-template-columns:repeat(3,1fr)}.booking{grid-template-columns:1fr 1fr;gap:64px}.dock{display:none}}
+.picker-option.is-selected{border-color:var(--gold-2);background:#fff4d8}@media(min-width:900px){.topnav{display:flex}.hero-in{grid-template-columns:1.2fr .8fr;align-items:center;padding-top:96px;padding-bottom:120px}.offers{grid-template-columns:repeat(3,1fr)}.booking{grid-template-columns:1fr 1fr;gap:64px}}
 </style>
 </head>
 <body>
@@ -45,20 +44,18 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
 <section class="hero"><div class="wrap hero-in"><div><p class="eyebrow">Du 18 au 20 décembre 2026</p><h1>Family Fun <em>Challenge</em> 2026</h1><p class="lead">Trois jours de musique, de jeux et de rencontres en famille, les pieds dans le sable.</p><div style="margin-top:20px"><a class="btn btn-gold btn-lg" href="#reservation">Réserver ma place</a></div></div>
 <aside class="count"><p class="count-title">Début de l'événement dans</p><div class="count-grid" id="countdown"><div><strong data-u="d">00</strong><span>jours</span></div><div><strong data-u="h">00</strong><span>heures</span></div><div><strong data-u="m">00</strong><span>minutes</span></div><div><strong data-u="s">00</strong><span>secondes</span></div></div><p style="color:#d7e4ee;font-size:.9rem">Paiement Mobile Money sécurisé via Kkiapay</p></aside></div></section>
 
-<section class="section section-sand" id="tarifs"><div class="wrap"><header class="head"><p class="kicker">Tarifs</p><h2>Choisissez votre formule</h2><p>Le montant s'adapte automatiquement selon votre choix.</p></header>
+<section class="section section-sand" id="tarifs"><div class="wrap"><header class="head"><p class="kicker">Tarifs</p><h2>Choisissez vos formules - Plusieurs choix possibles</h2><p>Vous pouvez sélectionner plusieurs offres, le montant s'additionne automatiquement.</p></header>
 <div class="offers">
 <article class="offer"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt=""><div class="offer-body"><p class="offer-date">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><p class="offer-label">Tables</p><div class="rows"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
 <article class="offer"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80" alt=""><div class="offer-body"><p class="offer-date">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><p class="offer-label">Inscription</p><div class="rows"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
 <article class="offer"><img src="https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=800&q=80" alt=""><div class="offer-body"><p class="offer-date">Pendant l'événement</p><h3>Stands de vente</h3><p class="offer-label">Location</p><div class="rows"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
 </div></div></section>
 
-<section class="section" id="reservation"><div class="wrap booking"><div><header class="head"><p class="kicker">Réservation</p><h2>Réservez en moins de deux minutes</h2><p>Choisissez, payez par Mobile Money, conservez votre référence.</p></header></div>
-<div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une offre</strong><small id="selectedOfferDetail">Cliquez pour voir les prix</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p class="status" id="status"></p><div class="done" id="done" hidden><h3>Réservation confirmée</h3><p class="done-ref" id="doneRef"></p><p id="doneOrder"></p><p class="muted">Référence à présenter à l'entrée. Reçu Kkiapay envoyé.</p></div></div></div></section>
+<section class="section" id="reservation"><div class="wrap booking"><div><header class="head"><p class="kicker">Réservation</p><h2>Réservez en moins de deux minutes</h2><p>Choisissez plusieurs offres, payez par Mobile Money.</p></header></div>
+<div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une ou plusieurs offres</strong><small id="selectedOfferDetail">Cliquez pour voir les prix</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p class="status" id="status"></p><div class="done" id="done" hidden><h3>Réservation confirmée</h3><p class="done-ref" id="doneRef"></p><p id="doneOrder"></p><p class="muted">Référence à présenter à l'entrée.</p></div></div></div></section>
 </main>
-
-<footer class="footer"><div class="wrap">Family Fun Challenge 2026, plage de Fidjrossè, Cotonou, Bénin.</div></footer>
-
-<div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><p class="kicker">Finaliser</p><h2>Votre offre</h2><p id="sheetOffer">Sélectionnez une formule</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div><form id="reservationForm"><div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" required placeholder="vous@exemple.com"></div><button class="btn btn-gold btn-lg btn-block" type="submit" id="reserveSubmit">Payer avec Kkiapay</button><p class="status" id="sheetStatus"></p></form></section></div>
+<footer class="footer"><div class="wrap">Family Fun Challenge 2026, plage de Fidjrossè, Cotonou.</div></footer>
+<div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><p class="kicker">Finaliser</p><h2>Vos offres</h2><p id="sheetOffer">Sélectionnez une ou plusieurs formules</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div><form id="reservationForm"><div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" required placeholder="vous@exemple.com"></div><button class="btn btn-gold btn-lg btn-block" type="submit">Payer avec Kkiapay</button><p class="status" id="sheetStatus"></p></form></section></div>
 
 <script src="https://cdn.kkiapay.me/k.js"></script>
 <script>
@@ -80,27 +77,37 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
   ];
   const $ = (s) => document.querySelector(s);
   const money = (n) => `${Number(n).toLocaleString('fr-FR').replace(/\s/g, '\u00a0')}\u00a0FCFA`;
-  let selected = null;
+  let selected = [];
   let pickerOpen = false;
   const total = $('#total');
   const status = $('#status');
   const sheet = $('#reservationSheet');
   const emailInput = $('#email');
   const reserveForm = $('#reservationForm');
-
   const say = (m) => { status.textContent = m || ''; };
   const saySheet = (m) => { $('#sheetStatus').textContent = m || ''; };
-
+  function getTotalPrice() { return selected.reduce((sum, item) => sum + item.price, 0); }
   function updateSelection() {
-    const offer = selected ? CATALOG.find(e => e.items.some(i => i.id === selected.id)) : null;
-    const offerLabel = selected ? `${offer?.label} — ${selected.label}` : 'Aucune offre sélectionnée';
-    $('#selectedOfferTitle').textContent = selected ? offerLabel : 'Choisir une offre';
-    $('#selectedOfferDetail').textContent = selected ? money(selected.price) + ' - Cliquez pour modifier' : 'Cliquez pour voir les prix';
-    total.textContent = money(selected?.price || 0);
-    $('#sheetOffer').textContent = offerLabel;
-    $('#sheetTotal').textContent = money(selected?.price || 0);
+    const totalPrice = getTotalPrice();
+    let title, detail;
+    if (selected.length === 0) {
+      title = 'Choisir une ou plusieurs offres';
+      detail = 'Cliquez pour voir les prix - Cochez plusieurs si besoin';
+    } else if (selected.length === 1) {
+      const offer = CATALOG.find(e => e.items.some(i => i.id === selected[0].id));
+      title = `${offer.label} — ${selected[0].label}`;
+      detail = `${money(totalPrice)} - 1 offre, cliquez pour ajouter`;
+    } else {
+      title = `${selected.length} offres sélectionnées`;
+      detail = selected.map(s => s.label).join(', ') + ` - ${money(totalPrice)}`;
+    }
+    $('#selectedOfferTitle').textContent = title;
+    $('#selectedOfferDetail').textContent = detail;
+    total.textContent = money(totalPrice);
+    $('#sheetOffer').textContent = selected.length ? selected.map(s => s.label).join(' + ') : 'Sélectionnez une ou plusieurs formules';
+    $('#sheetTotal').textContent = money(totalPrice);
     document.querySelectorAll('[data-item]').forEach(b => {
-      b.classList.toggle('is-selected', selected?.id === b.dataset.item);
+      b.classList.toggle('is-selected', selected.some(s => s.id === b.dataset.item));
     });
     renderPicker();
   }
@@ -117,9 +124,10 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
       offer.items.forEach(item => {
         const btn = document.createElement('button');
         btn.type = 'button';
-        btn.className = 'picker-option' + (selected?.id === item.id ? ' is-selected' : '');
-        btn.innerHTML = `<span>${item.label}</span><strong>${money(item.price)}</strong>`;
-        btn.addEventListener('click', () => { selected = item; updateSelection(); setPickerOpen(false); say('Offre sélectionnée. Vous pouvez réserver.'); });
+        const isSelected = selected.some(s => s.id === item.id);
+        btn.className = 'picker-option' + (isSelected ? ' is-selected' : '');
+        btn.innerHTML = `<span>${isSelected ? '✓ ' : ''}${item.label}</span><strong>${money(item.price)}</strong>`;
+        btn.addEventListener('click', () => { toggleItem(item.id); });
         group.append(btn);
       });
       menu.append(group);
@@ -127,63 +135,51 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
     menu.hidden = !pickerOpen;
   }
   function setPickerOpen(open) { pickerOpen = open; renderPicker(); }
-  function selectItem(id) {
+  function toggleItem(id) {
     const offer = CATALOG.find(e => e.items.some(i => i.id === id));
-    selected = offer?.items.find(i => i.id === id) || null;
+    const item = offer?.items.find(i => i.id === id);
+    if (!item) return;
+    const index = selected.findIndex(s => s.id === id);
+    if (index > -1) { selected.splice(index, 1); say('Offre retirée.'); }
+    else { selected.push(item); say(`${selected.length} offre(s). Total: ${money(getTotalPrice())}`); }
     updateSelection();
   }
+  function selectItem(id) { toggleItem(id); }
   function openSheet() {
-    if (!selected) { setPickerOpen(true); say('Choisissez d\'abord une offre.'); $('#bookingCard').scrollIntoView({behavior:'smooth'}); return; }
-    sheet.hidden = false;
-    document.body.classList.add('sheet-open');
-    saySheet('');
+    if (selected.length === 0) { setPickerOpen(true); say('Choisissez au moins une offre. Vous pouvez en choisir plusieurs.'); return; }
+    sheet.hidden = false; document.body.classList.add('sheet-open'); saySheet('');
   }
   function closeSheet() { sheet.hidden = true; document.body.classList.remove('sheet-open'); }
-  function showDone(paymentData) {
+  function showDone() {
     const ref = 'FFC-' + Math.random().toString(36).toUpperCase().slice(2,8);
     $('#doneRef').textContent = ref;
-    $('#doneOrder').textContent = `${CATALOG.find(e => e.items.some(i => i.id === selected.id)).label}, ${selected.label} : ${money(selected.price)}`;
-    $('#done').hidden = false;
-    $('#openReservation').hidden = true;
-    say('Paiement confirmé via Kkiapay. Référence : ' + ref);
-    closeSheet();
+    $('#doneOrder').textContent = selected.map(s => s.label).join(' + ') + ` : ${money(getTotalPrice())}`;
+    $('#done').hidden = false; $('#openReservation').hidden = true;
+    say('Paiement confirmé via Kkiapay. Référence : ' + ref); closeSheet();
   }
   reserveForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    if (!selected) return saySheet('Choisissez une offre.');
+    if (selected.length === 0) return saySheet('Choisissez au moins une offre.');
     if (!emailInput.reportValidity()) return;
-    if (typeof openKkiapayWidget !== 'function') return saySheet('Kkiapay ne charge pas. Vérifiez connexion.');
+    if (typeof openKkiapayWidget !== 'function') return saySheet('Kkiapay ne charge pas.');
     const email = emailInput.value.trim();
+    const totalPrice = getTotalPrice();
     saySheet('Ouverture du paiement...');
-    openKkiapayWidget({
-      amount: selected.price,
-      key: KKIA_PUBLIC_KEY,
-      sandbox: false,
-      email: email,
-      data: selected.id,
-      theme: '#062b47',
-      position: 'center'
-    });
+    openKkiapayWidget({ amount: totalPrice, key: KKIA_PUBLIC_KEY, sandbox: false, email: email, data: selected.map(s => s.id).join(','), theme: '#062b47', position: 'center' });
   });
   $('#openReservation').addEventListener('click', openSheet);
   $('#offerPickerToggle').addEventListener('click', () => setPickerOpen(!pickerOpen));
   $('#closeSheet').addEventListener('click', closeSheet);
   sheet.addEventListener('click', (ev) => { if (ev.target === sheet) closeSheet(); });
   document.querySelectorAll('[data-item]').forEach(el => el.addEventListener('click', () => selectItem(el.dataset.item)));
-
-  if (typeof addSuccessListener !== 'undefined') {
-    addSuccessListener(function(response) { showDone(response); });
-  }
-  if (typeof addFailedListener !== 'undefined') {
-    addFailedListener(function(err) { saySheet('Paiement échoué. Réessayez.'); });
-  }
+  if (typeof addSuccessListener !== 'undefined') { addSuccessListener(function() { showDone(); }); }
+  if (typeof addFailedListener !== 'undefined') { addFailedListener(function() { saySheet('Paiement échoué. Réessayez.'); }); }
   const start = new Date('2026-12-18T18:00:00+01:00').getTime();
   const units = { d: 86400000, h: 3600000, m: 60000, s: 1000 };
   function tick() {
     let left = Math.max(0, start - Date.now());
     for (const [key, size] of Object.entries(units)) {
-      const v = Math.floor(left / size);
-      left -= v * size;
+      const v = Math.floor(left / size); left -= v * size;
       const el = document.querySelector(`[data-u="${key}"]`);
       if (el) el.textContent = String(v).padStart(2, '0');
     }
