@@ -4,55 +4,78 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#062b47">
-<title>Family Fun Challenge 2026 | Fidjrosse, Cotonou</title>
+<title>Family Fun Challenge 2026</title>
 <style>
 :root{--navy:#062b47;--teal:#0b9aa0;--gold:#f2b33d;--gold-2:#e29e1f;--sand:#faf5ea;--ink:#14293b;--line:#e6dfce;--serif:Georgia,serif;--sans:system-ui,Arial,sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff;color:var(--ink);font:400 1rem/1.6 var(--sans)}
-.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+*{box-sizing:border-box}body{margin:0;font:400 1rem/1.6 var(--sans);color:var(--ink)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:12px;padding:12px 20px;font-weight:700;cursor:pointer}
-.btn-gold{background:linear-gradient(180deg,#f7c458,var(--gold));color:var(--navy)}.btn-sm{padding:9px 16px;font-size:.92rem}.btn-lg{padding:15px 26px;font-size:1.02rem}.btn-block{width:100%}
+.btn-gold{background:linear-gradient(180deg,#f7c458,var(--gold));color:var(--navy)}.btn-lg{padding:15px 26px;font-size:1.02rem}.btn-block{width:100%}
 .topbar{position:sticky;top:0;z-index:30;background:rgba(6,43,71,.94);color:#fff}.topbar-in{display:flex;align-items:center;justify-content:space-between;height:64px}.logo{font:700 1.15rem var(--serif)}
-.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(6,43,71,.92) 15%,rgba(6,43,71,.45) 100%),url("avion.jpg") center/cover var(--navy)}
-.hero-in{display:grid;gap:32px;padding-top:56px;padding-bottom:72px}.count{padding:22px;border-radius:20px;background:rgba(6,43,71,.72);border:1px solid rgba(255,255,255,.22)}
+.hero{position:relative;color:#fff;background:linear-gradient(100deg,rgba(6,43,71,.92) 15%,rgba(6,43,71,.45) 100%),url("avion.jpg") center/cover var(--navy);padding:56px 0 72px}
+.count{padding:22px;border-radius:20px;background:rgba(6,43,71,.72);border:1px solid rgba(255,255,255,.22)}
 .count-title{font-weight:700;color:#d7e4ee;font-size:.92rem;text-transform:uppercase}.count-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0;text-align:center}.count-grid div{padding:12px 4px;border-radius:12px;background:rgba(255,255,255,.08)}
 .count-grid strong{display:block;font:700 1.6rem/1 var(--serif)}.count-grid span{font-size:.75rem;color:#c3d4e0}
-.section{padding:72px 0}.section-sand{background:var(--sand)}.head{margin-bottom:32px}.kicker{font-size:.82rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
-.head h2{font:700 2.2rem/1.1 var(--serif);color:var(--navy)}.offers{display:grid;gap:20px}.offer{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.offer img{aspect-ratio:16/10;object-fit:cover;width:100%}.offer-body{display:flex;flex-direction:column;flex:1;padding:22px}.offer-date{font-size:.85rem;font-weight:700;color:var(--teal)}
-.rows{display:grid;gap:8px;margin-top:auto}.row{display:flex;justify-content:space-between;gap:12px;width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:var(--sand);cursor:pointer;text-align:left}
-.row.is-selected{border-color:var(--gold-2);background:#fff8e8;box-shadow:0 0 0 2px var(--gold-2)}
-.booking{display:grid;gap:36px}.card{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff}
-.field{margin:0 0 16px}label{display:block;margin-bottom:6px;font-size:.9rem;font-weight:700}input{width:100%;min-height:50px;padding:12px 14px;border:1px solid #cdd7df;border-radius:12px}
-.total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 16px;padding:16px 18px;border-radius:14px;background:var(--navy);color:#fff}.total strong{font:700 1.7rem var(--serif);color:var(--gold)}
+.section{padding:72px 0}.section-sand{background:var(--sand)}.head h2{font:700 2.2rem/1.1 var(--serif);color:var(--navy)}.offers{display:grid;gap:20px}.offer{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.offer img{width:100%;aspect-ratio:16/10;object-fit:cover}.offer-body{padding:22px}.row{display:flex;justify-content:space-between;gap:12px;width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:12px;background:var(--sand);cursor:pointer;text-align:left}
+.row.is-selected{border-color:var(--gold-2);background:#fff8e8}
+.card{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff}.total{display:flex;justify-content:space-between;padding:16px 18px;border-radius:14px;background:var(--navy);color:#fff}.total strong{color:var(--gold)}
 .sheet-backdrop{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;background:rgba(3,22,36,.58)}.sheet-backdrop[hidden]{display:none}
 .reservation-sheet{position:relative;width:100%;max-width:560px;max-height:90vh;overflow:auto;padding:28px 22px;border-radius:24px 24px 0 0;background:#fff}
 .sheet-close{position:absolute;top:14px;right:16px;width:42px;height:42px;border:0;border-radius:50%;background:#f0f4f6;font-size:1.8rem;cursor:pointer}
-body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space-between;gap:14px;width:100%;padding:16px;border:2px solid #cdd7df;border-radius:14px;background:#fff;text-align:left;cursor:pointer}
+.offer-picker{display:flex;justify-content:space-between;gap:14px;width:100%;padding:16px;border:2px solid #cdd7df;border-radius:14px;background:#fff;text-align:left;cursor:pointer}
 .offer-picker-menu{display:grid;gap:12px;margin-top:10px;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fbfdff}.offer-picker-menu[hidden]{display:none}
-.picker-group{display:grid;gap:6px}.picker-group-title{font-size:.76rem;font-weight:800;text-transform:uppercase;color:var(--teal)}.picker-option{display:flex;justify-content:space-between;gap:12px;width:100%;padding:12px;border:1px solid #dce4e9;border-radius:10px;background:#fff;text-align:left;cursor:pointer}
-.picker-option.is-selected{border-color:var(--gold-2);background:#fff4d8}@media(min-width:900px){.hero-in{grid-template-columns:1.2fr .8fr;align-items:center;padding-top:96px;padding-bottom:120px}.offers{grid-template-columns:repeat(3,1fr)}.booking{grid-template-columns:1fr 1fr;gap:64px}}
+@media(min-width:900px){.hero-in{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:32px}.offers{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="wrap topbar-in"><a class="logo" href="#top">Family Fun Challenge</a><a class="btn btn-gold btn-sm" href="#reservation">Réserver</a></div></header>
+<header class="topbar"><div class="wrap topbar-in"><a class="logo" href="#top">Family Fun Challenge</a><a class="btn btn-gold" href="#reservation" style="padding:9px 16px;font-size:.92rem">Réserver</a></div></header>
 <main>
-<section class="hero"><div class="wrap hero-in"><div><p style="display:inline-flex;gap:8px;padding:7px 14px;border-radius:99px;background:rgba(242,179,61,.16);border:1px solid rgba(242,179,61,.5);color:#ffd988;font-size:.85rem;font-weight:700">Du 18 au 20 décembre 2026</p><h1 style="font:700 clamp(2.5rem,9vw,5rem)/1 Georgia,serif;margin:20px 0 16px">Family Fun <em style="font-style:italic;color:var(--gold)">Challenge</em> 2026</h1><p style="font-size:1.2rem;color:#e3edf4;max-width:34ch">Trois jours de musique, de jeux et de rencontres en famille, les pieds dans le sable.</p><div style="margin-top:20px"><a class="btn btn-gold btn-lg" href="#reservation">Réserver ma place</a></div></div>
-<aside class="count"><p class="count-title">DÉBUT DANS</p><div class="count-grid"><div><strong data-u="d">--</strong><span>jours</span></div><div><strong data-u="h">--</strong><span>heures</span></div><div><strong data-u="m">--</strong><span>minutes</span></div><div><strong data-u="s">--</strong><span>secondes</span></div></div></aside></div></section>
+<section class="hero"><div class="wrap hero-in"><div><p style="display:inline-flex;padding:7px 14px;border-radius:99px;background:rgba(242,179,61,.16);border:1px solid rgba(242,179,61,.5);color:#ffd988;font-size:.85rem;font-weight:700">Du 18 au 20 décembre 2026</p><h1 style="font:700 clamp(2.5rem,9vw,5rem)/1 Georgia,serif;margin:20px 0 16px">Family Fun <em style="font-style:italic;color:var(--gold)">Challenge</em> 2026</h1><p style="font-size:1.2rem;color:#e3edf4;max-width:34ch">Trois jours de musique, de jeux et de rencontres en famille, les pieds dans le sable.</p><div style="margin-top:20px"><a class="btn btn-gold btn-lg" href="#reservation">Réserver ma place</a></div></div>
+<aside class="count"><p class="count-title">DÉBUT DANS</p><div class="count-grid"><div><strong id="cd-d">--</strong><span>jours</span></div><div><strong id="cd-h">--</strong><span>heures</span></div><div><strong id="cd-m">--</strong><span>minutes</span></div><div><strong id="cd-s">--</strong><span>secondes</span></div></div></aside></div></section>
 
-<section class="section section-sand" id="tarifs"><div class="wrap"><header class="head"><p class="kicker">Tarifs</p><h2>Choisissez vos formules - Plusieurs choix possibles</h2><p>Cliquez sur plusieurs offres, le total s'additionne.</p></header>
+<section class="section section-sand" id="tarifs"><div class="wrap"><header class="head"><p style="font-size:.82rem;font-weight:800;color:var(--teal)">Tarifs</p><h2>Choisissez vos formules</h2></header>
 <div class="offers">
-<article class="offer"><img src="avion.jpg" alt="Last Friday Afterwork"><div class="offer-body"><p class="offer-date">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><div class="rows"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
-<article class="offer"><img src="sport.jpg" alt="Competition familles"><div class="offer-body"><p class="offer-date">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><div class="rows"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
-<article class="offer"><img src="tablejaune.jpg" alt="Stands de vente"><div class="offer-body"><p class="offer-date">Pendant l'événement</p><h3>Stands de vente</h3><div class="rows"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
+<article class="offer"><img src="avion.jpg" alt="Afterwork"><div class="offer-body"><p style="color:var(--teal);font-weight:700;font-size:.85rem">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><div style="display:grid;gap:8px;margin-top:12px"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
+<article class="offer"><img src="sport.jpg" alt="Familles"><div class="offer-body"><p style="color:var(--teal);font-weight:700;font-size:.85rem">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><div style="display:grid;gap:8px;margin-top:12px"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
+<article class="offer"><img src="tablejaune.jpg" alt="Stands"><div class="offer-body"><p style="color:var(--teal);font-weight:700;font-size:.85rem">Pendant l'événement</p><h3>Stands de vente</h3><div style="display:grid;gap:8px;margin-top:12px"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
 </div></div></section>
 
-<section class="section" id="reservation"><div class="wrap booking"><div><header class="head"><p class="kicker">Réservation</p><h2>Réservez en moins de deux minutes</h2></header></div>
-<div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une ou plusieurs offres</strong><small id="selectedOfferDetail">Cliquez pour voir les prix</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p id="status" style="min-height:1.4em;margin-top:12px;font-size:.92rem;color:var(--teal);font-weight:600"></p><div id="done" hidden style="text-align:center"><h3>Réservation confirmée</h3><p id="doneRef" style="font:700 2rem Georgia"></p><p id="doneOrder"></p></div></div></div></section>
+<section class="section" id="reservation"><div class="wrap"><h2>Réservez en moins de deux minutes</h2>
+<div class="card" style="max-width:520px;margin-top:20px"><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une offre</strong><br><small id="selectedOfferDetail">Cliquez pour voir</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total" style="margin-top:16px"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation" style="margin-top:12px">Réserver</button><p id="status" style="margin-top:12px;color:var(--teal)"></p></div></div></section>
 </main>
-<div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><p class="kicker">Finaliser</p><h2>Vos offres</h2><p id="sheetOffer">Sélectionnez</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div>
-<form id="reservationForm"><div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" required placeholder="vous@exemple.com"></div>
+
+<div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><h2>Vos offres</h2><p id="sheetOffer">Aucune</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div>
+<form id="reservationForm" style="margin-top:16px"><div style="margin-bottom:16px"><label style="display:block;font-weight:700;margin-bottom:6px">Adresse e-mail</label><input id="email" type="email" required placeholder="vous@exemple.com" style="width:100%;min-height:50px;padding:12px 14px;border:1px solid #cdd7df;border-radius:12px"></div>
 <button class="btn btn-gold btn-lg btn-block" type="submit">PAIEMENT</button>
-<p id="sheetStatus" style="min-height:1.4em;margin-top:12px;font-size:.92rem;color:var(--teal);font-weight:600"></p></form></section></div>
+<p id="sheetStatus" style="margin-top:12px;color:var(--teal)"></p></form></section></div>
+
+<!-- DECOMPTE SEPARE QUI NE PEUT PLUS PLANTER -->
+<script>
+(function(){
+  var target = new Date(2026, 11, 18, 18, 0, 0).getTime();
+  function updateCount(){
+    var now = Date.now();
+    var diff = target - now;
+    if(diff < 0) diff = 0;
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var elD = document.getElementById('cd-d');
+    var elH = document.getElementById('cd-h');
+    var elM = document.getElementById('cd-m');
+    var elS = document.getElementById('cd-s');
+    if(elD) elD.textContent = (d<10?'0':'')+d;
+    if(elH) elH.textContent = (h<10?'0':'')+h;
+    if(elM) elM.textContent = (m<10?'0':'')+m;
+    if(elS) elS.textContent = (s<10?'0':'')+s;
+  }
+  updateCount();
+  setInterval(updateCount, 1000);
+})();
+</script>
+
 <script src="https://cdn.kkiapay.me/k.js"></script>
 <script>
 (() => {
@@ -76,7 +99,6 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
   const money = (n) => `${Number(n).toLocaleString('fr-FR').replace(/\s/g,'\u00a0')}\u00a0FCFA`;
   let selected = [];
   let pickerOpen = false;
-  const status = $('#status');
   function getTotal(){ return selected.reduce((a,b)=>a+b.price,0); }
   function updateUI(){
     const totalPrice = getTotal();
@@ -88,20 +110,21 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
       $('#selectedOfferDetail').textContent = selected.map(s=>s.label).join(' + ') + ' = ' + money(totalPrice);
     }
     $('#total').textContent = money(totalPrice);
-    $('#sheetOffer').textContent = selected.length ? selected.map(s=>s.label).join(' + ') : 'Aucune';
-    $('#sheetTotal').textContent = money(totalPrice);
+    if($('#sheetOffer')) $('#sheetOffer').textContent = selected.length ? selected.map(s=>s.label).join(' + ') : 'Aucune';
+    if($('#sheetTotal')) $('#sheetTotal').textContent = money(totalPrice);
     document.querySelectorAll('[data-item]').forEach(btn=>{
       btn.classList.toggle('is-selected', selected.some(s=>s.id===btn.dataset.item));
     });
     const menu = $('#offerPickerMenu');
+    if(!menu) return;
     menu.replaceChildren();
     CATALOG.forEach(cat=>{
-      const g=document.createElement('div'); g.className='picker-group';
-      const t=document.createElement('p'); t.className='picker-group-title'; t.textContent=cat.label; g.appendChild(t);
+      const g=document.createElement('div'); g.style.display='grid'; g.style.gap='6px';
+      const t=document.createElement('p'); t.style.fontSize='.76rem'; t.style.fontWeight='800'; t.style.color='#0b9aa0'; t.textContent=cat.label; g.appendChild(t);
       cat.items.forEach(item=>{
         const b=document.createElement('button'); b.type='button';
         const on = selected.some(s=>s.id===item.id);
-        b.className='picker-option'+(on?' is-selected':'');
+        b.className='row'+(on?' is-selected':''); b.style.width='100%';
         b.innerHTML=`<span>${on?'✓ ':''}${item.label}</span><strong>${money(item.price)}</strong>`;
         b.addEventListener('click',()=>toggle(item.id));
         g.appendChild(b);
@@ -118,47 +141,22 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
     updateUI();
   }
   function openSheet(){
-    if(selected.length===0){ pickerOpen=true; status.textContent='Choisissez au moins une offre !'; updateUI(); return; }
-    $('#reservationSheet').hidden=false; document.body.classList.add('sheet-open');
+    if(selected.length===0){ pickerOpen=true; const st=$('#status'); if(st) st.textContent='Choisissez au moins une offre !'; updateUI(); return; }
+    const sh=$('#reservationSheet'); if(sh) sh.hidden=false; document.body.classList.add('sheet-open');
   }
-  function closeSheet(){ $('#reservationSheet').hidden=true; document.body.classList.remove('sheet-open'); }
-  $('#openReservation').addEventListener('click', openSheet);
-  $('#offerPickerToggle').addEventListener('click', ()=>{ pickerOpen=!pickerOpen; updateUI(); });
-  $('#closeSheet').addEventListener('click', closeSheet);
-  $('#reservationSheet').addEventListener('click', e=>{ if(e.target.id==='reservationSheet') closeSheet(); });
+  function closeSheet(){ const sh=$('#reservationSheet'); if(sh) sh.hidden=true; document.body.classList.remove('sheet-open'); }
+  const btnOpen=$('#openReservation'); if(btnOpen) btnOpen.addEventListener('click', openSheet);
+  const btnToggle=$('#offerPickerToggle'); if(btnToggle) btnToggle.addEventListener('click', ()=>{ pickerOpen=!pickerOpen; updateUI(); });
+  const btnClose=$('#closeSheet'); if(btnClose) btnClose.addEventListener('click', closeSheet);
+  const backdrop=$('#reservationSheet'); if(backdrop) backdrop.addEventListener('click', e=>{ if(e.target.id==='reservationSheet') closeSheet(); });
   document.querySelectorAll('[data-item]').forEach(el=> el.addEventListener('click', ()=>toggle(el.dataset.item)));
-  $('#reservationForm').addEventListener('submit', e=>{
+  const form=$('#reservationForm'); if(form) form.addEventListener('submit', e=>{
     e.preventDefault();
     if(selected.length===0) return;
-    const email=$('#email').value.trim();
-    if(typeof openKkiapayWidget!=='function'){ $('#sheetStatus').textContent='Kkiapay ne charge pas.'; return; }
-    openKkiapayWidget({ amount:getTotal(), key:KKIA_PUBLIC_KEY, sandbox:true, email:email, data:selected.map(s=>s.id).join(',[STRIPPED] theme:'#062b47', position:'center' });
+    const emailEl=$('#email'); const email=emailEl?emailEl.value.trim():'';
+    if(typeof openKkiapayWidget!=='function'){ const s=$('#sheetStatus'); if(s) s.textContent='Kkiapay ne charge pas, réessaie.'; return; }
+    openKkiapayWidget({ amount:getTotal(), key:KKIA_PUBLIC_KEY, sandbox:true, email:email, data:selected.map(s=>s.id).join(','), theme:'#062b47', position:'center' });
   });
-  if(typeof addSuccessListener!=='function'){ console.log('Kkiapay listener pas encore chargé'); }
-
-  // DECOMPTE QUI NE S'ARRETE PLUS - CIBLE 18 DEC 2026 18h COTONOU
-  const TARGET = new Date(2026, 11, 18, 18, 0, 0).getTime();
-  function tick(){
-    try{
-      const now = Date.now();
-      let diff = TARGET - now;
-      if(diff < 0) diff = 0;
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
-      const elD = document.querySelector('[data-u="d"]');
-      const elH = document.querySelector('[data-u="h"]');
-      const elM = document.querySelector('[data-u="m"]');
-      const elS = document.querySelector('[data-u="s"]');
-      if(elD) elD.textContent = String(d).padStart(2,'0');
-      if(elH) elH.textContent = String(h).padStart(2,'0');
-      if(elM) elM.textContent = String(m).padStart(2,'0');
-      if(elS) elS.textContent = String(s).padStart(2,'0');
-    }catch(e){ console.log('count error', e); }
-  }
-  tick();
-  setInterval(tick, 1000);
   updateUI();
 })();
 </script>
