@@ -8,7 +8,7 @@
 <style>
 :root{--navy:#062b47;--ocean:#0b4f7c;--teal:#0b9aa0;--gold:#f2b33d;--gold-2:#e29e1f;--sand:#faf5ea;--ink:#14293b;--muted:#5a6d80;--line:#e6dfce;--serif:ui-serif,Georgia,serif;--sans:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;--shadow:0 18px 45px -18px rgba(6,43,71,.28)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:#fff;color:var(--ink);font:400 1rem/1.6 var(--sans)}
-h1,h2,h3,p{margin:0}ul{padding:0;list-style:none}a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}button,input{font:inherit;color:inherit}
+h1,h2,h3,p{margin:0}a{color:inherit;text-decoration:none}img{display:block;max-width:100%;height:auto}button,input{font:inherit;color:inherit}
 .wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:12px;padding:12px 20px;font-weight:700;cursor:pointer}
 .btn-gold{background:linear-gradient(180deg,#f7c458,var(--gold));color:var(--navy)}.btn-sm{padding:9px 16px;font-size:.92rem}.btn-lg{padding:15px 26px;font-size:1.02rem}.btn-block{width:100%}
@@ -28,7 +28,7 @@ h1,h2,h3,p{margin:0}ul{padding:0;list-style:none}a{color:inherit;text-decoration
 .booking{display:grid;gap:36px}.card{padding:24px;border:1px solid var(--line);border-radius:22px;background:#fff;box-shadow:var(--shadow)}
 .field{margin:0 0 16px}label{display:block;margin-bottom:6px;font-size:.9rem;font-weight:700}input{width:100%;min-height:50px;padding:12px 14px;border:1px solid #cdd7df;border-radius:12px}
 .total{display:flex;justify-content:space-between;align-items:baseline;margin:18px 0 16px;padding:16px 18px;border-radius:14px;background:var(--navy);color:#fff}.total strong{font:700 1.7rem var(--serif);color:var(--gold)}
-.status{min-height:1.4em;margin-top:12px;font-size:.92rem;color:var(--teal);font-weight:600}.done{text-align:center;padding:12px 0}.done-ref{margin:10px 0 6px;font:700 2rem var(--serif);color:var(--ocean)}.muted{color:var(--muted);font-size:.9rem}
+.status{min-height:1.4em;margin-top:12px;font-size:.92rem;color:var(--teal);font-weight:600}.done{text-align:center;padding:12px 0}.done-ref{margin:10px 0 6px;font:700 2rem var(--serif);color:var(--ocean)}
 .footer{padding:24px 0;background:#041f35;color:#9fb6c7;font-size:.88rem;text-align:center}
 .sheet-backdrop{position:fixed;inset:0;z-index:100;display:flex;align-items:flex-end;justify-content:center;background:rgba(3,22,36,.58)}.sheet-backdrop[hidden]{display:none}
 .reservation-sheet{position:relative;width:100%;max-width:560px;max-height:90vh;overflow:auto;padding:28px 22px;border-radius:24px 24px 0 0;background:#fff}
@@ -46,12 +46,12 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
 <aside class="count"><p class="count-title">DÉBUT DANS</p><div class="count-grid"><div><strong data-u="d">00</strong><span>jours</span></div><div><strong data-u="h">00</strong><span>heures</span></div><div><strong data-u="m">00</strong><span>minutes</span></div><div><strong data-u="s">00</strong><span>secondes</span></div></div></aside></div></section>
 <section class="section section-sand" id="tarifs"><div class="wrap"><header class="head"><p class="kicker">Tarifs</p><h2>Choisissez vos formules - Plusieurs choix possibles</h2><p>Cliquez sur plusieurs offres, le total s'additionne.</p></header>
 <div class="offers">
-<article class="offer"><img src="avion.jpg" alt="Last Friday Afterwork"><div class="offer-body"><p class="offer-date">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><p class="offer-label">Tables</p><div class="rows"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
-<article class="offer"><img src="sport.jpg" alt="Competition familles"><div class="offer-body"><p class="offer-date">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><p class="offer-label">Inscription</p><div class="rows"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
-<article class="offer"><img src="tablejaune.jpg" alt="Stands de vente"><div class="offer-body"><p class="offer-date">Pendant l'événement</p><h3>Stands de vente</h3><p class="offer-label">Location</p><div class="rows"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
+<article class="offer"><img src="avion.jpg" alt="Last Friday Afterwork"><div class="offer-body"><p class="offer-date">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><p class="offer-label">TABLES</p><div class="rows"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
+<article class="offer"><img src="sport.jpg" alt="Competition familles"><div class="offer-body"><p class="offer-date">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><p class="offer-label">INSCRIPTION</p><div class="rows"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
+<article class="offer"><img src="tablejaune.jpg" alt="Stands de vente"><div class="offer-body"><p class="offer-date">Pendant l'événement</p><h3>Stands de vente</h3><p class="offer-label">LOCATION</p><div class="rows"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
 </div></div></section>
 <section class="section" id="reservation"><div class="wrap booking"><div><header class="head"><p class="kicker">Réservation</p><h2>Réservez en moins de deux minutes</h2></header></div>
-<div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une ou plusieurs offres</strong><small id="selectedOfferDetail">Cliquez pour voir les prix - multi-choix possible</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p class="status" id="status"></p><div class="done" id="done" hidden><h3>Réservation confirmée</h3><p class="done-ref" id="doneRef"></p><p id="doneOrder"></p></div></div></div></section>
+<div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une ou plusieurs offres</strong><small id="selectedOfferDetail">Multi-choix possible</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p class="status" id="status"></p><div class="done" id="done" hidden><h3>Réservation confirmée</h3><p class="done-ref" id="doneRef"></p><p id="doneOrder"></p></div></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">Family Fun Challenge 2026, plage de Fidjrossè, Cotonou.</div></footer>
 <div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><p class="kicker">Finaliser</p><h2>Vos offres</h2><p id="sheetOffer">Sélectionnez</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div>
@@ -59,28 +59,8 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
 <button class="btn btn-gold btn-lg btn-block" type="submit">PAIEMENT</button>
 <p class="status" id="sheetStatus"></p></form></section></div>
 <script>
-// DECOMPTE SEPARE - MULTI-SELECTION INTACTE
-(function(){
-  var TARGET = new Date(2026, 11, 18, 18, 0, 0).getTime();
-  function tick(){
-    var diff = TARGET - Date.now();
-    if(diff < 0) diff = 0;
-    var d = Math.floor(diff/86400000);
-    var h = Math.floor((diff%86400000)/3600000);
-    var m = Math.floor((diff%3600000)/60000);
-    var s = Math.floor((diff%60000)/1000);
-    var elD = document.querySelector('[data-u="d"]');
-    var elH = document.querySelector('[data-u="h"]');
-    var elM = document.querySelector('[data-u="m"]');
-    var elS = document.querySelector('[data-u="s"]');
-    if(elD) elD.textContent = String(d).padStart(2,'0');
-    if(elH) elH.textContent = String(h).padStart(2,'0');
-    if(elM) elM.textContent = String(m).padStart(2,'0');
-    if(elS) elS.textContent = String(s).padStart(2,'0');
-  }
-  tick();
-  setInterval(tick, 1000);
-})();
+// DECOMPTE
+(function(){var T=new Date(2026,11,18,18,0,0).getTime();function tick(){var diff=T-Date.now();if(diff<0)diff=0;var d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);var elD=document.querySelector('[data-u="d"]'),elH=document.querySelector('[data-u="h"]'),elM=document.querySelector('[data-u="m"]'),elS=document.querySelector('[data-u="s"]');if(elD)elD.textContent=String(d).padStart(2,'0');if(elH)elH.textContent=String(h).padStart(2,'0');if(elM)elM.textContent=String(m).padStart(2,'0');if(elS)elS.textContent=String(s).padStart(2,'0');}tick();setInterval(tick,1000);})();
 </script>
 <script src="https://cdn.kkiapay.me/k.js"></script>
 <script>
@@ -111,7 +91,7 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
     const totalPrice = getTotal();
     if(selected.length===0){
       $('#selectedOfferTitle').textContent='Choisir une ou plusieurs offres';
-      $('#selectedOfferDetail').textContent='Cliquez pour voir - vous pouvez en cocher plusieurs';
+      $('#selectedOfferDetail').textContent='Multi-choix possible - cliquez plusieurs fois';
     } else {
       $('#selectedOfferTitle').textContent = selected.length + ' offre(s) sélectionnée(s)';
       $('#selectedOfferDetail').textContent = selected.map(s=>s.label).join(' + ') + ' = ' + money(totalPrice);
@@ -119,6 +99,7 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
     $('#total').textContent = money(totalPrice);
     $('#sheetOffer').textContent = selected.length ? selected.map(s=>s.label).join(' + ') : 'Aucune';
     $('#sheetTotal').textContent = money(totalPrice);
+    // MULTI SELECTION - ON GARDE TOUT
     document.querySelectorAll('[data-item]').forEach(btn=>{
       btn.classList.toggle('is-selected', selected.some(s=>s.id===btn.dataset.item));
     });
@@ -142,12 +123,16 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
   function toggle(id){
     const item = ALL_ITEMS.find(i=>i.id===id);
     const idx = selected.findIndex(s=>s.id===id);
-    if(idx>-1){ selected.splice(idx,1); status.textContent='Offre retirée - Total: '+money(getTotal()); }
-    else { selected.push(item); status.textContent=selected.length+' offre(s) - Total: '+money(getTotal()); }
+    if(idx>-1){
+      selected.splice(idx,1);
+    } else {
+      selected.push(item); // ON AJOUTE, ON NE REMPLACE PAS
+    }
+    status.textContent = selected.length ? selected.length+' offre(s) cochée(s) - Total: '+money(getTotal()) : '';
     updateUI();
   }
   function openSheet(){
-    if(selected.length===0){ pickerOpen=true; status.textContent='Choisissez au moins une offre. Vous pouvez en choisir plusieurs !'; updateUI(); return; }
+    if(selected.length===0){ pickerOpen=true; status.textContent='Choisissez au moins une offre - plusieurs possibles !'; updateUI(); return; }
     document.getElementById('reservationSheet').hidden=false; document.body.classList.add('sheet-open');
   }
   function closeSheet(){ document.getElementById('reservationSheet').hidden=true; document.body.classList.remove('sheet-open'); }
