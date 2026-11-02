@@ -44,12 +44,17 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
 <main>
 <section class="hero"><div class="wrap hero-in"><div><p class="eyebrow">Du 18 au 20 décembre 2026</p><h1>Family Fun <em>Challenge</em> 2026</h1><p class="lead">Trois jours de musique, de jeux et de rencontres en famille, les pieds dans le sable.</p><div style="margin-top:20px"><a class="btn btn-gold btn-lg" href="#reservation">Réserver ma place</a></div></div>
 <aside class="count"><p class="count-title">Début dans</p><div class="count-grid"><div><strong data-u="d">00</strong><span>jours</span></div><div><strong data-u="h">00</strong><span>heures</span></div><div><strong data-u="m">00</strong><span>minutes</span></div><div><strong data-u="s">00</strong><span>secondes</span></div></div><p style="color:#d7e4ee;font-size:.9rem">Paiement Mobile Money via Kkiapay</p></aside></div></section>
+
 <section class="section section-sand" id="tarifs"><div class="wrap"><header class="head"><p class="kicker">Tarifs</p><h2>Choisissez vos formules - Plusieurs choix possibles</h2><p>Cliquez sur plusieurs offres, le total s'additionne.</p></header>
 <div class="offers">
-<article class="offer"><img src="tablejaune.jpg" alt="Afterwork Fidjrosse"><div class="offer-body"><p class="offer-date">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><p class="offer-label">Tables</p><div class="rows"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
-<article class="offer"><img src="sport.jpg" alt="Famille Fidjrosse"><div class="offer-body"><p class="offer-date">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><p class="offer-label">Inscription</p><div class="rows"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
-<article class="offer"><img src="avion.jpg" alt="Stands Fidjrosse"><div class="offer-body"><p class="offer-date">Pendant l'événement</p><h3>Stands de vente</h3><p class="offer-label">Location</p><div class="rows"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
+<!-- LAST FRIDAY AFTERWORK = TABLE JAUNE -->
+<article class="offer"><img src="tablejaune.jpg" alt="Last Friday Afterwork"><div class="offer-body"><p class="offer-date">Vendredi 18 décembre</p><h3>Last Friday Afterwork</h3><p class="offer-label">Tables</p><div class="rows"><button type="button" class="row" data-item="afterwork:2"><span>2 places</span><strong>1 000 FCFA</strong></button><button type="button" class="row" data-item="afterwork:4"><span>4 places</span><strong>1 500 FCFA</strong></button><button type="button" class="row" data-item="afterwork:6"><span>6 places</span><strong>2 000 FCFA</strong></button></div></div></article>
+<!-- COMPETITION FAMILLES = SPORT -->
+<article class="offer"><img src="sport.jpg" alt="Competition familles"><div class="offer-body"><p class="offer-date">Sam 19 et Dim 20 décembre</p><h3>Compétition de familles</h3><p class="offer-label">Inscription</p><div class="rows"><button type="button" class="row" data-item="famille:1"><span>1 parent et 2 enfants</span><strong>5 000 FCFA</strong></button></div></div></article>
+<!-- STAND DE VENTE = AVION -->
+<article class="offer"><img src="avion.jpg" alt="Stands de vente"><div class="offer-body"><p class="offer-date">Pendant l'événement</p><h3>Stands de vente</h3><p class="offer-label">Location</p><div class="rows"><button type="button" class="row" data-item="stand:1"><span>1 jour</span><strong>15 000 FCFA</strong></button><button type="button" class="row" data-item="stand:3"><span>3 jours</span><strong>35 000 FCFA</strong></button></div></div></article>
 </div></div></section>
+
 <section class="section" id="reservation"><div class="wrap booking"><div><header class="head"><p class="kicker">Réservation</p><h2>Réservez en moins de deux minutes</h2></header></div>
 <div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une ou plusieurs offres</strong><small id="selectedOfferDetail">Cliquez pour voir les prix</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p class="status" id="status"></p><div class="done" id="done" hidden><h3>Réservation confirmée</h3><p class="done-ref" id="doneRef"></p><p id="doneOrder"></p></div></div></div></section>
 </main>
@@ -134,7 +139,7 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
     if(selected.length===0) return;
     const email=document.getElementById('email').value.trim();
     if(typeof openKkiapayWidget!=='function'){ document.getElementById('sheetStatus').textContent='Kkiapay ne charge pas.'; return; }
-    openKkiapayWidget({ amount:getTotal(), key:KKIA_PUBLIC_KEY, sandbox:true, email:email, data:selected.map(s=>s.id).join(','), theme:'#062b47', position:'center' });
+    openKkiapayWidget({ amount:getTotal(), key:KKIA_PUBLIC_KEY, sandbox:true, email:email, data:selected.map(s=>s.id).join(',[STRIPPED] theme:'#062b47', position:'center' });
   });
   if(typeof addSuccessListener!=='undefined'){ addSuccessListener(()=>{ 
     const ref='FFC-'+Math.random().toString(36).toUpperCase().slice(2,8);
