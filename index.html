@@ -54,7 +54,10 @@ body.sheet-open{overflow:hidden}.offer-picker{display:flex;justify-content:space
 <div class="card" id="bookingCard"><p class="kicker">Votre sélection</p><button type="button" class="offer-picker" id="offerPickerToggle"><span><strong id="selectedOfferTitle">Choisir une ou plusieurs offres</strong><small id="selectedOfferDetail">Cliquez pour voir les prix</small></span> ▼</button><div class="offer-picker-menu" id="offerPickerMenu" hidden></div><div class="total"><span>Total à payer</span><strong id="total">0 FCFA</strong></div><button class="btn btn-gold btn-lg btn-block" type="button" id="openReservation">Réserver</button><p class="status" id="status"></p><div class="done" id="done" hidden><h3>Réservation confirmée</h3><p class="done-ref" id="doneRef"></p><p id="doneOrder"></p></div></div></div></section>
 </main>
 <footer class="footer"><div class="wrap">Family Fun Challenge 2026, plage de Fidjrossè, Cotonou.</div></footer>
-<div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><p class="kicker">Finaliser</p><h2>Vos offres</h2><p id="sheetOffer">Sélectionnez</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div><form id="reservationForm"><div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" required placeholder="vous@exemple.com"></div><button class="btn btn-gold btn-lg btn-block" type="submit">Payer avec Kkiapay</button><p class="status" id="sheetStatus"></p></form></section></div>
+<div class="sheet-backdrop" id="reservationSheet" hidden><section class="reservation-sheet"><button type="button" class="sheet-close" id="closeSheet">×</button><p class="kicker">Finaliser</p><h2>Vos offres</h2><p id="sheetOffer">Sélectionnez</p><div class="total"><span>Total</span><strong id="sheetTotal">0 FCFA</strong></div>
+<form id="reservationForm"><div class="field"><label for="email">Adresse e-mail</label><input id="email" type="email" required placeholder="vous@exemple.com"></div>
+<button class="btn btn-gold btn-lg btn-block" type="submit">PAIEMENT</button>
+<p class="status" id="sheetStatus"></p></form></section></div>
 <script src="https://cdn.kkiapay.me/k.js"></script>
 <script>
 (() => {
