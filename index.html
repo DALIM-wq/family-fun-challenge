@@ -105,7 +105,7 @@ document.getElementById('reservationForm').addEventListener('submit',e=>{
   e.preventDefault();
   if(selected.length===0)return;
   if(typeof openKkiapayWidget!=='function'){document.getElementById('sheetStatus').textContent='Kkiapay ne charge pas';return;}
-  openKkiapayWidget({amount:getTotal(),key:"de9764c9c064d133d8b21a5f8371742f456546ba",sandbox:true,email:document.getElementById('email').value,data:selected.map(s=>s.id).join(','),theme:'#062b47',position:'center'});
+  openKkiapayWidget({amount:getTotal(),key:"de9764c9c064d133d8b21a5f8371742f456546ba",sandbox:false,email:document.getElementById('email').value,data:selected.map(s=>s.id).join(','),theme:'#062b47',position:'center'});
 });
 updateUI();
 </script>
